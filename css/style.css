@@ -8,3 +8,11 @@ body {
 #map {
     height: 100vh;
 }
+
+.label {
+    background: rgba(255, 255, 255, 0);
+    font-size: 2.2em;
+    border: 0;
+    border-radius: 0px;
+    box-shadow: 0 0px 0px;
+}

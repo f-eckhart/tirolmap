@@ -18,6 +18,25 @@ function drawStates(map) {
                 style: {
                     "color": "#ff0000",
                     "opacity": 0.5
+                },
+                onEachFeature: function (feature, layer) {
+                    // https://stackoverflow.com/questions/42907877/leaflet-js-geojson-labels/42916690
+                    layer.on({
+                        mouseover: function () {
+                            this.setStyle({
+                                'fillColor': '#00ff00',
+                            });
+                        },
+                        mouseout: function () {
+                            this.setStyle({
+                                'fillColor': '#ff0000',
+                            });
+                        },
+                        click: function () {
+                            alert('Clicked on ' + feature.properties.name)
+                        }
+                    });
+                    layer.bindTooltip(feature.properties.name, {permanent: true, direction: 'center', className: 'label'}); 
                 }
             }).addTo(map)
         );
