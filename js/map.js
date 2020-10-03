@@ -11,7 +11,7 @@ function initializeMap() {
 }
 
 function drawStates(map) {
-    fetch('data/laender_999_geo.json', {mode:'no-cors'})
+    fetch('data/bezirke_999_geo.json', {mode:'no-cors'})
         .then(response => response.json())
         .then(data =>
             L.geoJSON(data, {
