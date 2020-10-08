@@ -1,3 +1,4 @@
+const dataSource = 'data/gemeinden-tirol_999_geo.json';
 initializeMap();
 
 function initializeMap() {
@@ -11,7 +12,7 @@ function initializeMap() {
 }
 
 function drawMunicipalities(map) {
-    fetch('data/gemeinden-tirol_999_geo.json', {mode:'no-cors'})
+    fetch(dataSource, {mode:'no-cors'})
         .then(response => response.json())
         .then(data =>
             L.geoJSON(data, {
