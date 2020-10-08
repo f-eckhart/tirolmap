@@ -7,11 +7,11 @@ function initializeMap() {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    drawStates(map);
+    drawMunicipalities(map);
 }
 
-function drawStates(map) {
-    fetch('data/bezirke_999_geo.json', {mode:'no-cors'})
+function drawMunicipalities(map) {
+    fetch('data/gemeinden-tirol_999_geo.json', {mode:'no-cors'})
         .then(response => response.json())
         .then(data =>
             L.geoJSON(data, {
@@ -33,7 +33,7 @@ function drawStates(map) {
                             });
                         },
                         click: function () {
-                            alert('Clicked on ' + feature.properties.name)
+                            alert('Geklickt auf ' + feature.properties.name)
                         }
                     });
                     layer.bindTooltip(feature.properties.name, {permanent: true, direction: 'center', className: 'label'}); 
