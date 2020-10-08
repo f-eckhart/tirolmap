@@ -1,4 +1,6 @@
 let municipalities = null;
+let currentMunicipality = null;
+
 initGame();
 
 function initGame() {
@@ -13,12 +15,12 @@ function initGame() {
 
 function play() {
     let index = getRandomIndex(0, municipalities.length);
-    let municipality = municipalities[index].properties;
+    currentMunicipality = municipalities[index].properties;
 
     let gameBox = document.getElementById('game-box');
     let label = document.getElementById('municipality-name');
     gameBox.classList.remove('no-display');
-    label.innerText = municipality.name;
+    label.innerText = currentMunicipality.name;
 }
 
 function getRandomIndex(min, max) {

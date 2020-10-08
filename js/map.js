@@ -34,7 +34,10 @@ function drawMunicipalities(map) {
                             });
                         },
                         click: function () {
-                            alert('Geklickt auf ' + feature.properties.name)
+                            alert('Geklickt auf ' + feature.properties.name);
+                            if ((currentMunicipality != null) && (feature.properties.name == currentMunicipality.name)) {
+                                play();
+                            }
                         }
                     });
                     layer.bindTooltip(feature.properties.name, {permanent: true, direction: 'center', className: 'label'}); 
