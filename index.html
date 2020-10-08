@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
             integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
             crossorigin=""/>
@@ -15,5 +15,10 @@
 
     <body>
         <div id="map"></div>
+        <div id="label-switch">
+            <a href="javascript:toggleLabels()">
+                <i id="label-switch-icon" class="fa fa-toggle-on"></i>
+            </a>
+        </div>
     </body>
 </html>

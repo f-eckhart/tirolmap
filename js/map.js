@@ -41,3 +41,19 @@ function drawMunicipalities(map) {
             }).addTo(map)
         );
 }
+
+function toggleLabels() {
+    let labels = document.getElementsByClassName('label');
+    for (let label of labels) {
+        label.classList.toggle('no-display');
+    }
+
+    let menu = document.getElementById('label-switch-icon');
+    if (menu.classList.contains('fa-toggle-on')) {
+        menu.classList.remove('fa-toggle-on');
+        menu.classList.add('fa-toggle-off');
+    } else {
+        menu.classList.remove('fa-toggle-off');
+        menu.classList.add('fa-toggle-on');
+    }
+}
