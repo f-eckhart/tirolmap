@@ -20,6 +20,9 @@ function play() {
     let gameBox = document.getElementById('game-box');
     let label = document.getElementById('municipality-name');
     gameBox.classList.remove('no-display');
+    gameBox.classList.add('game-box-default')
+    gameBox.classList.remove('game-box-correct');
+    gameBox.classList.remove('game-box-false');
     label.innerText = currentMunicipality.name;
 }
 
@@ -34,9 +37,25 @@ function municipalityClicked(municipality) {
     divClickedLabel.classList.remove('no-display');
     divClickedLabel.classList.add('display-inline-flex');
 
+    let gameBox = document.getElementById('game-box');
     if ((currentMunicipality != null) && (municipality.name == currentMunicipality.name)) {
-        play();
+        gameBox.classList.remove('game-box-false');
+        gameBox.classList.add('game-box-correct');
+        gameBox.classList.remove('game-box-default');
+    } else if ((currentMunicipality != null) && (municipality.name != currentMunicipality.name)) {
+        gameBox.classList.remove('game-box-correct');
+        gameBox.classList.add('game-box-false');
+        gameBox.classList.remove('game-box-default');
     }
+
+    setTimeout(function() {
+        divClickedLabel.classList.add('no-display');
+        divClickedLabel.classList.remove('display-inline-flex');
+
+        if ((currentMunicipality != null) && (municipality.name == currentMunicipality.name)) {
+            play();
+        }
+    }, 5000);
 }
 
 function toggleMenu() {

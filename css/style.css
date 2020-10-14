@@ -28,10 +28,6 @@ p {
     box-shadow: 0 0px 0px;
 }
 
-#menu {
-
-}
-
 #menu-icon {
     position: absolute;
     top: 100px;
@@ -88,11 +84,23 @@ p {
     left: 6em;
     top: 1em;
     z-index: 999;
-    background-color: #F0C11D;
-    color: #000;
     font-size: 1.5em;
     padding: 0.7em;
     border-radius: 0.4em;
+}
+
+.game-box-default {
+    background-color: #F0C11D;
+    color: #000;
+}
+
+.game-box-correct {
+    background-color: #0CE84A;
+}
+
+.game-box-false {
+    background-color: #FF530D;
+    color: #fff;
 }
 
 .name-section {
@@ -130,10 +138,6 @@ p {
 #municipality-name,
 #clicked-municipality {
     padding-left: 0.4em;
-}
-
-.btn-next {
-    color: #000;
 }
 
 .display-inline-flex {
