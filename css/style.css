@@ -85,25 +85,57 @@ p {
 
 #game-box {
     position: absolute;
-    left: 10%;
-    top: 5%;
+    left: 6em;
+    top: 1em;
     z-index: 999;
-    width: 20em;
-    max-width: 85%;
-    height: 1.5em;
-    background-color: #1E33F0;
-    color: #fff;
+    background-color: #F0C11D;
+    color: #000;
     font-size: 1.5em;
     padding: 0.7em;
-    padding-bottom: 0.5em;
     border-radius: 0.4em;
 }
 
-.game {
+.name-section {
+    width: 100%;
+    max-width: 100%;
+    display: inline-flex;
+}
+
+.game-icon {
+    font-size: 1.1em;
+    padding-right: 0.4em;
+}
+
+.game-municipality {
     display: flex;
     justify-content: space-between;
+    width: 20em;
+    max-width: 100%;
+}
+
+#game-clicked {
+
+    padding-top: 1em;
+}
+
+.game-municipality,
+#game-clicked {
+    line-height: 1.5em;
+}
+
+.bullseye {
+    font-size: 1.2em;
+}
+
+#municipality-name,
+#clicked-municipality {
+    padding-left: 0.4em;
 }
 
 .btn-next {
-    color: #ccc;
+    color: #000;
+}
+
+.display-inline-flex {
+    display: inline-flex;
 }
