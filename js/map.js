@@ -5,7 +5,7 @@ function initializeMap() {
     let map = L.map('map').setView([47.2692124, 11.4041024], 9);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> Mitwirkende'
     }).addTo(map);
 
     drawMunicipalities(map);

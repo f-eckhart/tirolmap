@@ -11,6 +11,11 @@ a {
     color: inherit;
 }
 
+p {
+    padding: 0;
+    margin: 0;
+}
+
 #map {
     height: 100vh;
 }
@@ -23,18 +28,55 @@ a {
     box-shadow: 0 0px 0px;
 }
 
-#label-switch {
+#menu {
+
+}
+
+#menu-icon {
     position: absolute;
     top: 100px;
     left: 10px;
-    z-index: 9999;
-    background-color: #fff;
     height: 35px;
     width: 35px;
-    border-radius: 2px;
-    font-size: 1.8em;
-    box-shadow: 3px 3px #ccc;
+    font-size: 1.3em;
+    line-height: 35px;
     text-align: center;
+}
+
+#menu-content {
+    position: absolute;
+    top: 135px;
+    left: 10px;
+    z-index: 9999;
+    background-color: #fff;
+    padding: 0.5em;
+}
+
+#menu-icon, #menu-content {
+    z-index: 9999;
+    background-color: #fff;
+    border-radius: 2px;
+    border: 2px solid #ccc;
+}
+
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em;
+}
+
+.menu-item i {
+    font-size: 1.8em;
+}
+
+.config-label {
+    padding-right: 1em;
+    line-height: 1.8em;
+}
+
+.impressum {
+    padding-bottom: 0.5em;
 }
 
 .no-display {

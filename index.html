@@ -16,11 +16,37 @@
 
     <body>
         <div id="map"></div>
-        <div id="label-switch">
-            <a href="javascript:toggleLabels()">
-                <i id="label-switch-icon" class="fa fa-toggle-on"></i>
+
+        <div id="menu">
+            <a href="javascript:toggleMenu()">
+                <div id="menu-icon">
+                    <i class="fa fa-bars"></i>
+                </div>
             </a>
+            
+            <div id="menu-content" class="no-display">
+                <div class="menu-item">
+                    <div class="config-label">Ortsnamen anzeigen</div>
+                    <a href="javascript:toggleLabels()">
+                        <i id="label-switch-icon" class="fa fa-toggle-on"></i>
+                    </a>
+                </div>
+                <hr>
+                <div class="menu-item">
+                    <div>
+                        <p class="impressum">Impressum</p>
+                        <p>
+                            Karten: <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a><br>
+                            Karten-Darstellung: <a href="https://leafletjs.com/" target="_blank">Leaflet</a><br>
+                            Geo-Daten: <a href="https://github.com/ginseng666/GeoJSON-TopoJSON-Austria" target="_blank">GeoLand Kärnten</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
+        
+
+        
         <div id="game-box" class="no-display">
             <div class="game">
                 <div id="municipality-name"></div>

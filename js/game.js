@@ -26,3 +26,8 @@ function play() {
 function getRandomIndex(min, max) {
     return Math.floor(Math.random() * (max - min) ) + min;
 }
+
+function toggleMenu() {
+    let menu = document.getElementById('menu-content');
+    menu.classList.toggle('no-display');
+}
