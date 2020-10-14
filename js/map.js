@@ -17,7 +17,7 @@ function drawMunicipalities(map) {
         .then(data =>
             L.geoJSON(data, {
                 style: {
-                    "color": "#ff0000",
+                    "color": "#1E33F0",
                     "opacity": 0.5
                 },
                 onEachFeature: function (feature, layer) {
@@ -25,12 +25,12 @@ function drawMunicipalities(map) {
                     layer.on({
                         mouseover: function () {
                             this.setStyle({
-                                'fillColor': '#00ff00',
+                                'fillColor': '#F0C11D',
                             });
                         },
                         mouseout: function () {
                             this.setStyle({
-                                'fillColor': '#ff0000',
+                                'fillColor': '#1E33F0',
                             });
                         },
                         click: function () {
